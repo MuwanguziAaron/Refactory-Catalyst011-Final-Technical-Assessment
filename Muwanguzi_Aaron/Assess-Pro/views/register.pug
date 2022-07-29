@@ -1,0 +1,86 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title corona virus reg form
+  style.
+    body{
+    padding-left: 6%;
+    text-align: center;
+    }
+    .textbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 40px;
+    }
+    .colums {
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    flex-wrap:wrap;
+    }
+    .colums div {
+    width:48%;
+    }
+    form {
+    width: 60%;
+    padding: 20px;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 0 8px #006622;
+    }
+section
+  .testbox-lg-4
+    form(name='reg')
+      .container
+      fieldset
+        .banner
+          img(src='./images/header-images/form-header-image.png')
+          p Ministry of Health
+          h1 COVID-19 (CORONA VIRUS)
+          p Virus-TestRegistration Form
+        br
+        .colums
+          .item
+            label(for='first name') Sur name
+            br
+            input#first(type='text' onblur='assess()')
+            p#one
+          .item
+            label(for='last name') Given name
+            br
+            input#second(type='text' onblur='birth()')
+          .item
+            label(for='dob') date of birth
+            br
+            input(type='date' name='bir')
+          .item
+            label place of residence
+            br
+            input#place(type='text' onfocus='Resd')
+          .item
+            label occuption
+            br
+            input#job(type='text' onfocus='assess()')
+          .item
+            label nationality
+            br
+            input#country(type='text' onfocus='assess()')
+          .row-lg-6
+            label Gender
+            br
+            input(type='radio')
+            | Male
+            input(type='radio')
+            | Female
+          .row-lg-6
+            label category
+            br
+            select#kind(name='typeofproduct')
+              option(value='Default') -Select category-
+      .btn-block
+        button(type='submit' href='/') Register
+script(src='./registration.js')
